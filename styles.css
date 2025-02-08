@@ -14,7 +14,7 @@ body {
   padding: 0;
   text-align: center;
   background: #d2f5a8;
-  background: url('./assets/bg.png');
+  background: url('./assets/bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: none;
@@ -65,7 +65,7 @@ header h1 {
   letter-spacing: 3px;
   font-family: "Ourland", serif;
   text-shadow: 1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000,
-  2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
+  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
 }
 
 .main-right {
@@ -162,7 +162,7 @@ header h1 {
 /* Pre-Sale */
 .presale {
   color: white;
-  padding: calc(36px + 3vh) 4vw;
+  padding: calc(36px + 4.5vh) 4vw;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -193,11 +193,14 @@ header h1 {
 
 .footer-img {
   position: absolute;
-  bottom: -56vw;
-  right: -42vw;
-  width: 100vw;
+  bottom: -42vw;
+  right: -30vw;
+  width: 85vw;
 }
 
+.social-icons a {
+  text-decoration: none;
+}
 /* Responsive */
 @media (min-width: 719px) {
 :root {
@@ -205,6 +208,7 @@ header h1 {
 }
   body {
     background-position-y: 40%;
+    background-size: 158%;
   }
   .main {
     padding: 4vh 4vw 0 4vw;
@@ -226,11 +230,11 @@ header h1 {
   .main-left p {
     text-align: left;
   }
-  
+
   .launch-btn {
     margin: .5vh 0;
   }
-  
+
   .main-right {
     margin-top: 0vh;
     width: 100%;
@@ -243,12 +247,12 @@ header h1 {
     width: 70%;
   }
   .contract-box {
-    padding: 0 14%;
+    padding: 0 12%;
   }
   .footer-img {
     position: absolute;
-    bottom: -29vw;
-    right: -20vw;
-    width: 54vw;
+    bottom: -25vw;
+    right: -16vw;
+    width: 50vw;
   }
 }
