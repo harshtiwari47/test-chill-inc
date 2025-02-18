@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document.querySelector(".launch-btn").addEventListener("click",
-    function () {
-      window.open("https://yourbuyurl.com", "_blank");
-    });
 
   function copyAddress() {
     const addressField = document.getElementById("contractAddress");

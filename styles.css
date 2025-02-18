@@ -400,8 +400,34 @@ header img {
 @media (min-width: 1600px) {
   .main-right img {
     position: absolute;
-    width: calc(75% + .75vw);
-    transform: translateX(5%);
+    width: calc(85% + .75vw);
+    transform: translate(0, 48%);
     z-index: 4;
+  }
+
+  .main-left p {
+    font-size: calc(110% + .25vw);
+    text-align: left;
+  }
+}
+
+@media (min-width: 2480px) {
+  .footer-img2 {
+    position: absolute;
+    bottom: 0;
+    left: 0vw;
+    width: 10vw;
+    z-index: -2;
+  }
+
+  .footer-img {
+    position: absolute;
+    bottom: 0vw;
+    right: 0vw;
+    width: 14vw;
+  }
+
+  .main-right .tomb-img {
+    transform: translate(-55%, 110%);
   }
 }
