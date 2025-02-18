@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'Ourland';
-  src: url('./assets/font/Ourland.ttf') format('truetype');
+  font-family: 'Hachimaki';
+  src: url('./assets/font/hHachimaki.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cheese Market';
-  src: url('./assets/font/Cheese Market.otf') format('opentype');
+  font-family: 'Poppins';
+  src: url('./assets/font/Poppins-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 /* General Styles */
 body {
-  font-family: "Ourland", serif;
+  font-family: "Hachimaki", serif;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -34,56 +34,54 @@ header {
   display: flex;
 }
 
-header h1 {
-  font-size: 110%;
-  font-weight: 900;
-  letter-spacing: 3px;
-  font-family: "Ourland", serif;
+header img {
+  width: 7em;
 }
 
 .main {
   padding: 4vh 4vw 0 4vw;
+  overflow: hidden;
+}
+
+.main h2 {
+  font-size: calc(320% + .5vw);
+  letter-spacing: 3px;
+  color: white;
+  padding: 0;
+  margin: 0;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
 }
 
 .main p {
-  font-size: 110%;
+  font-size: calc(70% + .38vw);
   color: white;
   font-weight: 800;
-  word-spacing: -1px;
-  letter-spacing: 2px;
-  text-shadow: 1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
-}
-
-.launch-btn {
-  background: #e87c37;
-  padding: 8px 18px;
-  border: none;
-  color: #5aff3b;
-  font-weight: bold;
-  cursor: pointer;
-  border: 2px solid #010009;
-  border-bottom: 3px solid #010009;
-  font-weight: 900;
-  font-size: 120%;
-  border-radius: 8px;
-  margin: 2vh 0;
-  letter-spacing: 3px;
-  font-family: "Ourland", serif;
-  text-shadow: 1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+  word-spacing: .5px;
+  line-height: 1.4;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
 }
 
 .main-right {
   margin-top: 6vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 6.75em;
 }
 
 .main-right img {
   width: 50%;
+  transform: translate(0%, -25%);
+  object-fit: cover;
+  z-index: 1;
 }
 /* Contract Section */
 .contract-section {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .contract-box {
@@ -94,12 +92,28 @@ header h1 {
   grid-template-columns: 4fr 1.5fr;
 }
 
+.contract-section h3 {
+  color: white;
+  font-size: calc(98% + .47vw);
+  letter-spacing: 1px;
+  padding: 2em 0;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
+
+}
+
 .contract-section h2 {
-  color: #fff;
-  font-size: 120%;
-  letter-spacing: 3px;
-  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
+  color: #e8c936;
+  font-size: calc(98% + .47vw);
+  letter-spacing: 1px;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
+}
+
+.contract-box {
+  padding-bottom: 2em;
 }
 
 .contract-box input {
@@ -108,11 +122,11 @@ header h1 {
   width: 100%;
   padding: 10px 6px;
   font-size: 75%;
-  border-bottom: 2px solid #010009;
-  border-right: 2px solid #010009;
+  border: .23em solid #010009;
+  border-bottom: .38em solid #010009;
   text-align: center;
-  border-radius: 4px;
-  font-family: "Ourland", serif;
+  border-radius: 2em;
+  font-family: "Poppins", serif;
   letter-spacing: 1px;
   height: 80%;
 }
@@ -140,7 +154,7 @@ header h1 {
 
 /* Roadmap Section */
 .roadmap {
-  padding: 40px 16px;
+  padding: 1em 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -151,12 +165,13 @@ header h1 {
 }
 
 .roadmap h2 {
-  font-size: 160%;
-  color: white;
+  font-size: calc(85% + .47vw);
+  color: #e8c936;
   margin: 2% 0;
-  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  2px 2px #000000, -2px -2px #000000, 2px -2px #000000, -2px 2px #000000;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
 }
 
 .roadmap img {
@@ -168,7 +183,7 @@ header h1 {
 /* Pre-Sale */
 .presale {
   color: white;
-  padding: calc(36px + 4.5vh) 4vw;
+  padding: calc(30px + 4vh) 4vw;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -183,28 +198,49 @@ header h1 {
 .presale h2 {
   font-weight: 700;
   letter-spacing: 2px;
-  font-size: 98%;
+  font-size: calc(100% + .47vw);
   width: 75%;
   text-align: center;
   letter-spacing: 4px;
-  text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
-  1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+  filter: drop-shadow(3px 0 0 #000000)
+  drop-shadow(0 3px 0 #000000);
+  text-shadow: 2px 2px 20px black;
 }
 
 .social-icons img {
   width: 13%;
   max-width: calc(70px + 1vw);
   margin: 1%;
+  transition: transform 0.2s ease-in-out;
 }
 
 .footer-img {
   position: absolute;
-  bottom: -42vw;
-  right: -30vw;
-  width: 85vw;
+  bottom: -10vw;
+  right: -10vw;
+  width: 50vw;
+  z-index: -2;
+}
+
+.footer-img2 {
+  position: absolute;
+  bottom: -10vw;
+  left: 0vw;
+  width: calc(47vw - 2vw);
+  z-index: -2;
+}
+
+.footer-shadow {
+  position: absolute;
+  bottom: -.75em;
+  width: 100%;
+  left: 0;
+  z-index: -1;
 }
 
 .social-icons a {
+  width: 100%;
+  height: 100%;
   text-decoration: none;
 }
 /* Responsive */
@@ -212,10 +248,7 @@ header h1 {
 :root {
   font-size: calc(18px + 1.25vw);
 }
-  body {
-    background-position-y: 40%;
-    background-size: 158%;
-  }
+
   .main {
     padding: 4vh 4vw 0 4vw;
     display: grid;
@@ -226,6 +259,7 @@ header h1 {
     box-sizing: border-box;
     overflow: hidden;
   }
+
   .main-left {
     display: flex;
     flex-direction: column;
@@ -235,6 +269,27 @@ header h1 {
 
   .main-left p {
     text-align: left;
+  }
+
+  .main-left .social-icons {
+    width: 100%;
+    display: inline;
+    gap: .75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .social-icons a {
+    display: inline;
+    width: max-content;
+    height: 100%;
+  }
+
+  .social-icons a img {
+    width: 120%;
+    height: 100%;
   }
 
   .launch-btn {
@@ -249,16 +304,34 @@ header h1 {
     place-items: center;
   }
 
-  .main-right img {
-    width: 70%;
+  .main-right {
+    position: relative;
   }
+
+  .main-right img {
+    position: absolute;
+    width: calc(105% + 1vw);
+    transform: translateX(-5%);
+  }
+
   .contract-box {
     padding: 0 12%;
   }
+  .presale h2 {
+    width: 50%;
+    font-size: calc(120% + .47vw);
+  }
   .footer-img {
     position: absolute;
-    bottom: -25vw;
-    right: -16vw;
-    width: 50vw;
+    bottom: 0vw;
+    right: 0vw;
+    width: 33vw;
+  }
+  .footer-img2 {
+    position: absolute;
+    bottom: -10vw;
+    left: 0vw;
+    width: 36vw;
+    z-index: -2;
   }
 }
