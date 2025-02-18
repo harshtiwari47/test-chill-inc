@@ -40,7 +40,9 @@ header img {
 
 .main {
   padding: 4vh 4vw 0 4vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  overflow-x: visible;
 }
 
 .main h2 {
@@ -72,14 +74,27 @@ header img {
   justify-items: center;
   height: max-content;
   height: calc(9em + 2vw);
+  position: relative;
+  z-index: -1;
 }
 
 .main-right img {
-  width: calc(13em + 1vw + 1vh);
+  width: calc(15em + .65vw);
   transform: translate(0%, -25%);
   object-fit: cover;
   z-index: 1;
 }
+
+.main-right .tomb-img {
+  transform: translate(-55%, 30%);
+  width: calc(10em + .65vw);
+  height: calc(110% + .65vw);
+  object-fit: scale-down;
+  z-index: -1;
+  position: absolute;
+  filter: brightness(90%) contrast(150%);
+}
+
 /* Contract Section */
 .contract-section {
   padding: 0 20px 20px 20px;
@@ -277,8 +292,9 @@ header img {
 }
 
   body {
-     background-size: 120%; /* Zoom in */
-  object-fit: contain;
+    background-size: 120%;
+    /* Zoom in */
+    object-fit: contain;
   }
 
   .main {
@@ -289,7 +305,8 @@ header img {
     grid-gap: 0;
     gap: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-x: visible;
   }
 
   .main-left {
@@ -301,9 +318,6 @@ header img {
 
   .main-left p {
     font-size: calc(60% + .25vw);
-  }
-
-  .main-left p {
     text-align: left;
   }
 
@@ -329,32 +343,31 @@ header img {
   }
 
   .main-right {
-    margin-top: 0vh;
+    margin-top: 2vh;
     width: 100%;
-    height: 100%;
     display: grid;
     place-items: center;
-  }
-
-  .main-right {
     position: relative;
+    z-index: -1;
+    margin-bottom: 30%;
   }
 
   .main-right img {
     position: absolute;
-    width: calc(88% + .95vw);
-    transform: translateX(5%);
+    width: calc(110% + .95vw);
+    transform: translate(0%, 47%);
     z-index: 4;
+    bottom: 30%;
   }
 
   .main-right .tomb-img {
-    transform: translate(-30%, 50%);
-    width: calc(88% + .65vw);
-    aspect-ratio: .8;
-    background: red;
-    object-fit: contain;
-    z-index: 3;
+    transform: translate(-55%, 80%);
+    width: calc(80% + .65vw);
+    height: calc(190% + .65vw);
+    object-fit: scale-down;
+    z-index: -1;
     position: absolute;
+    filter: brightness(90%) contrast(150%);
   }
 
   .contract-box {
@@ -381,5 +394,14 @@ header img {
   .footer-shadow {
     position: absolute;
     bottom: -.1.3em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main-right img {
+    position: absolute;
+    width: calc(75% + .75vw);
+    transform: translateX(5%);
+    z-index: 4;
   }
 }
