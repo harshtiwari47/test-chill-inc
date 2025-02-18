@@ -70,11 +70,12 @@ header img {
   display: grid;
   align-items: center;
   justify-items: center;
-  height: 6.75em;
+  height: max-content;
+  height: calc(9em + 2vw);
 }
 
 .main-right img {
-  width: 50%;
+  width: calc(13em + 1vw + 1vh);
   transform: translate(0%, -25%);
   object-fit: cover;
   z-index: 1;
@@ -183,7 +184,7 @@ header img {
 /* Pre-Sale */
 .presale {
   color: white;
-  padding: calc(30px + 4vh) 4vw;
+  padding: calc(30px + 5vh) 4vw;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -198,7 +199,7 @@ header img {
 .presale h2 {
   font-weight: 700;
   letter-spacing: 2px;
-  font-size: calc(100% + .47vw);
+  font-size: calc(60% + .65em);
   width: 75%;
   text-align: center;
   letter-spacing: 4px;
@@ -236,6 +237,8 @@ header img {
   width: 100%;
   left: 0;
   z-index: -1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  height: 60%;
 }
 
 .social-icons a {
@@ -243,11 +246,40 @@ header img {
   height: 100%;
   text-decoration: none;
 }
+
 /* Responsive */
+@media (min-width: 481px) {
+  .footer-img {
+    position: absolute;
+    bottom: -10vw;
+    right: -10vw;
+    width: 45vw;
+    z-index: -2;
+  }
+
+  .footer-img2 {
+    position: absolute;
+    bottom: -10vw;
+    left: 0vw;
+    width: calc(42vw - 2vw);
+    z-index: -2;
+  }
+
+  .presale h2 {
+    width: 70%;
+    font-size: calc(118% + .49vw + .25em);
+  }
+}
+
 @media (min-width: 719px) {
 :root {
   font-size: calc(18px + 1.25vw);
 }
+
+  body {
+     background-size: 120%; /* Zoom in */
+  object-fit: contain;
+  }
 
   .main {
     padding: 4vh 4vw 0 4vw;
@@ -265,6 +297,10 @@ header img {
     flex-direction: column;
     align-items: start;
     justify-content: start;
+  }
+
+  .main-left p {
+    font-size: calc(60% + .25vw);
   }
 
   .main-left p {
@@ -292,10 +328,6 @@ header img {
     height: 100%;
   }
 
-  .launch-btn {
-    margin: .5vh 0;
-  }
-
   .main-right {
     margin-top: 0vh;
     width: 100%;
@@ -310,8 +342,19 @@ header img {
 
   .main-right img {
     position: absolute;
-    width: calc(105% + 1vw);
-    transform: translateX(-5%);
+    width: calc(88% + .95vw);
+    transform: translateX(5%);
+    z-index: 4;
+  }
+
+  .main-right .tomb-img {
+    transform: translate(-30%, 50%);
+    width: calc(88% + .65vw);
+    aspect-ratio: .8;
+    background: red;
+    object-fit: contain;
+    z-index: 3;
+    position: absolute;
   }
 
   .contract-box {
@@ -319,19 +362,24 @@ header img {
   }
   .presale h2 {
     width: 50%;
-    font-size: calc(120% + .47vw);
+    font-size: calc(140% + .47vw);
   }
   .footer-img {
     position: absolute;
     bottom: 0vw;
     right: 0vw;
-    width: 33vw;
+    width: 29vw;
   }
   .footer-img2 {
     position: absolute;
     bottom: -10vw;
     left: 0vw;
-    width: 36vw;
+    width: 32vw;
     z-index: -2;
+  }
+
+  .footer-shadow {
+    position: absolute;
+    bottom: -.1.3em;
   }
 }
